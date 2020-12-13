@@ -56,7 +56,7 @@ class LaravelRceCheck:
            header= {'User-Agent':'User-Agent: Mozilla/5.0 (X11; Linux aarch64; rv:78.0) Gecko/20100101 Firefox/78.0'}
            try:
               r = s.get("http://"+urls, headers=header, cookies=cookie)
-              soup = BeautifulSoup(r.content, 'html5lib')
+              time.sleep(1)
               appKey = re.findall('APP_KEY=([^"\n]+)', r.text)
               key = re.findall('APP_KEY', r.text)
               

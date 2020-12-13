@@ -4,7 +4,8 @@ from laravelrce.banner import *
 class LaravelRceCheck:
 
    def __init__(self, url):
-      
+      global console
+      console = Console()
       os.system('clear')
       
       pretty.install()
@@ -61,7 +62,7 @@ class LaravelRceCheck:
               
 
 
-              console = Console()
+              
               #date = datetime.date.today()
               if appKey:
                  

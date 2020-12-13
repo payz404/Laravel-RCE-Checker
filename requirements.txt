@@ -1,0 +1,7 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+pytz==2020.4
+random-user-agent==1.0.1
+requests==2.25.0
+requests-random-user-agent==2020.11.22
+rich==9.2.0

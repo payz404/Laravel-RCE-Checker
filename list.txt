@@ -1,0 +1,3 @@
+http://urlaravel.site
+http://ex.web/
+http://urlaravel2.ex/.env

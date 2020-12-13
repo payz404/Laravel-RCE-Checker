@@ -71,20 +71,20 @@ class LaravelRceCheck:
                  console.print(live.replace("\n", ""))
                  
                  self.save_to_file('Rezult/Config/Config.txt', r.text)
-                 time.sleep(1)
+                 
               else:
               
                  i += 1
                  nvuln = "[red][ {} ][/red] [blue][ {}/{} ] [/blue][yellow]http://{}[/yellow][cyan] =>[/cyan] [red]Not Vuln[/red]".format(self.date.today().strftime('%H:%M:%m:%d:%Y'), i, count, urls)
                  console.print(nvuln.replace("\n", ""))
-                 time.sleep(1)
+                 
                  
 
            except requests.exceptions.MissingSchema:
                i += 1
-               miss = "[red][ {} ][/red] [blue][ {}/{} ] [/blue][yellow]http://{}[/yellow][cyan] =>[/cyan] [red] Error [ Please put valid url. ex http://url.com in your txt file ][/red]".format(self.date.today().strftime('%H:%M:%m:%d:%Y'), i, count, urls)
+               miss = "[red][ {} ][/red][red] Put valid url. ex http://url.com in your txt file ][/red]".format(self.date.today().strftime('%H:%M:%m:%d:%Y'))
                console.print(miss.replace("\n", ""))
-               time.sleep(1)
+               
                continue
                                              
                                              
@@ -92,7 +92,7 @@ class LaravelRceCheck:
                                              
            except requests.exceptions.ConnectionError:
                i += 1
-               err = "[red][ {} ][/red] [blue][ {}/{} ] [/blue][yellow]http://{}[/yellow][cyan] =>[/cyan] [red]Error URL is die[/red]".format(self.date.today().strftime('%H:%M:%m:%d:%Y'), i, count, urls)
+               err = "[red][ {} ][/red][red] URL is die[/red]".format(self.date.today().strftime('%H:%M:%m:%d:%Y'))
                console.print(err.replace("\n", ""))  
-               time.sleep(1)
+               
                continue

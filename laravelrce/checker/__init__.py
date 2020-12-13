@@ -42,8 +42,8 @@ class LaravelRceCheck:
       
    def check(self):
        
-       
-       
+       console = Console()
+
        count = len(self.url)
        i = 0
        for urls in self.validation():
@@ -55,7 +55,7 @@ class LaravelRceCheck:
            cookie = s.cookies.get_dict()
            header= {'User-Agent':'User-Agent: Mozilla/5.0 (X11; Linux aarch64; rv:78.0) Gecko/20100101 Firefox/78.0'}
            try:
-              r = s.get(urls, headers=header, cookies=cookie)
+              r = s.get("http://"+urls, headers=header, cookies=cookie)
               
               appKey = re.findall('APP_KEY=([^"\n]+)', r.text)
               key = re.findall('APP_KEY', r.text)
